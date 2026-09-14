@@ -9,15 +9,29 @@ export function Footer() {
       <div className="mx-auto flex max-w-[1400px] flex-col gap-10">
         <div className="flex flex-col justify-between gap-8 md:flex-row md:items-start">
           <div className="flex flex-col gap-3">
-            <div className="flex items-center gap-2.5 font-mono text-[11px] font-semibold uppercase tracking-[0.32em] text-foreground">
+            <a
+              href="https://www.instagram.com/arif_xtwo/"
+              target="_blank"
+              rel="noreferrer"
+              className="flex w-fit items-center gap-2.5 font-mono text-[11px] font-semibold uppercase tracking-[0.32em] text-foreground transition-colors hover:text-accent"
+            >
               <span
                 aria-hidden
                 className="inline-block h-2 w-2 rounded-full bg-accent shadow-[0_0_12px_rgba(212,162,47,0.9)]"
               />
               Arif / Portfolio
-            </div>
+            </a>
             <p className="max-w-[38ch] font-sans text-sm leading-relaxed text-zinc-400">
-              &copy; {new Date().getFullYear()} Arif. Built with passion and a
+              &copy; {new Date().getFullYear()} {" "}
+              <a
+                href="https://www.instagram.com/arif_xtwo/"
+                target="_blank"
+                rel="noreferrer"
+                className="text-foreground underline-offset-4 hover:text-accent hover:underline"
+              >
+                Arif
+              </a>
+              . Built with passion and a
               cinematic Iron Man-inspired interface.
             </p>
             <a
@@ -46,7 +60,9 @@ export function Footer() {
             ].map(([name, note]) => (
               <a
                 key={name}
-                href="#"
+                href={note === "Arif Studio" ? "https://www.instagram.com/arif_xtwo/" : "#"}
+                target={note === "Arif Studio" ? "_blank" : undefined}
+                rel={note === "Arif Studio" ? "noreferrer" : undefined}
                 className="group flex flex-col gap-1"
               >
                 <span className="font-sans text-[13px] font-medium text-foreground transition-colors group-hover:text-accent">

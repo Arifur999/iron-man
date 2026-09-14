@@ -1,17 +1,9 @@
 "use client";
 
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { EyebrowBadge } from "@/components/ui/EyebrowBadge";
 import { HudFrame } from "@/components/ui/HudFrame";
 import { DIALOGUES, FRAME_COUNT, HERO_TEXT_FADE_END, framePath } from "@/lib/hero";
-
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      [elementName: string]: any;
-    }
-  }
-}
 
 export function Hero() {
   const sectionRef = useRef<HTMLElement | null>(null);
@@ -227,7 +219,18 @@ export function Hero() {
           className="absolute inset-x-0 bottom-0 z-10 flex flex-col items-start gap-5 px-6 pb-24 md:px-12 md:pb-28"
           style={{ transition: "opacity 80ms linear" }}
         >
-          <EyebrowBadge>MARK LXXXV // ARIF // ONLINE</EyebrowBadge>
+          <EyebrowBadge>
+            MARK LXXXV //{" "}
+            <a
+              href="https://www.instagram.com/arif_xtwo/"
+              target="_blank"
+              rel="noreferrer"
+              className="pointer-events-auto underline-offset-4 hover:underline"
+            >
+              ARIF
+            </a>{" "}
+            // ONLINE
+          </EyebrowBadge>
           <h1 className="max-w-[14ch] font-sans text-5xl font-semibold leading-[0.95] tracking-tighter text-foreground md:text-7xl lg:text-8xl">
             I am
             <br />

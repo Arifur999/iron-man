@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ArrowUpRight } from "@phosphor-icons/react";
 
@@ -23,8 +22,10 @@ export function Navbar() {
       }`}
     >
       <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-4 md:px-8 md:py-5">
-        <Link
-          href="/"
+        <a
+          href="https://www.instagram.com/arif_xtwo/"
+          target="_blank"
+          rel="noreferrer"
           className="flex items-center gap-2.5 font-mono text-[11px] font-semibold uppercase tracking-[0.32em] text-foreground"
         >
           <span
@@ -32,7 +33,7 @@ export function Navbar() {
             className="inline-block h-2 w-2 rounded-full bg-accent shadow-[0_0_12px_rgba(212,162,47,0.9)]"
           />
           Arif / Portfolio
-        </Link>
+        </a>
 
         <nav className="hidden items-center gap-8 md:flex">
           <a
