@@ -229,7 +229,7 @@ export function Hero() {
             >
               ARIF
             </a>{" "}
-            // ONLINE
+            {"// ONLINE"}
           </EyebrowBadge>
           <h1 className="max-w-[14ch] font-sans text-5xl font-semibold leading-[0.95] tracking-tighter text-foreground md:text-7xl lg:text-8xl">
             I am
